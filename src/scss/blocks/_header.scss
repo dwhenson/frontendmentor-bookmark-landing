@@ -1,0 +1,178 @@
+/*   Navigation
+     ================================================== */
+.header {
+  display: grid;
+  grid-column: 1 / -1;
+  background-color: var(--clr-neutral-100);
+}
+
+.site-head__inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+.logo {
+  max-inline-size: min-content;
+  padding-block-start: 0.5rem;
+  margin-inline-end: 2rem;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+
+  li {
+    max-inline-size: 8rem;
+  }
+}
+
+a {
+  display: block;
+  text-align: center;
+}
+
+.login {
+  margin-inline-start: auto;
+}
+
+.cta a {
+  outline-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-100);
+}
+
+// /* Burger menu
+//   ================================================== */
+
+/* Hamburger button creation */
+.burger-menu__trigger {
+  display: none;
+}
+
+.burger-menu__bar,
+.burger-menu__bar::before,
+.burger-menu__bar::after {
+  position: absolute;
+  display: block;
+  inset-inline-start: 50%;
+  inline-size: 24px;
+  block-size: 3px;
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: 3px;
+  margin-inline-start: -12px;
+  background: var(--clr-neutral-300);
+  transition: transform 100ms ease-in-out;
+}
+
+.burger-menu__bar {
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-menu__bar::before,
+.burger-menu__bar::after {
+  content: "";
+}
+
+.burger-menu__bar::before {
+  inset-block-start: -8px;
+}
+
+.burger-menu__bar::after {
+  inset-block-end: -8px;
+}
+
+// Hamburger button size and positioning
+.burger-menu[enabled="true"] .burger-menu__trigger {
+  position: relative;
+  display: block;
+  inset-inline-start: calc(100% - 2rem);
+  inline-size: 2rem;
+  block-size: 2rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+// CHECK: Check if need to disable scroll or not?
+// Hamburger menu panel size and positioning
+.burger-menu[enabled="true"] .burger-menu__panel {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  inset-block-start: 3rem;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  padding-block-start: 2rem;
+  overflow-y: auto;
+  padding-inline: clamp(1rem, 5%, 4rem);
+  -webkit-overflow-scrolling: touch;
+}
+
+// Hamburger menu panel contents size and positioning
+// FIXME cta width in open panel
+.burger-menu[enabled="true"] .navigation {
+  padding: 2rem;
+  border-radius: 0.25em;
+  box-shadow: 0 10px 40px var(--clr-neutral-400);
+  background-color: var(--clr-primary-200);
+
+  ul {
+    flex-direction: column;
+    font-weight: 700;
+  }
+
+  li:not(:first-of-type) {
+    margin-block-start: 2rem;
+  }
+
+  a {
+    color: var(--clr-neutral-100);
+  }
+
+  .login {
+    margin-inline-start: unset;
+  }
+}
+
+// Hamburger menu panel transitions
+.burger-menu[enabled="true"][status="open"] .burger-menu__panel {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 100ms ease;
+}
+
+.burger-menu[enabled="true"][status="closed"] .burger-menu__panel > * {
+  opacity: 0;
+}
+
+.burger-menu[enabled="true"][status="open"] .burger-menu__panel > * {
+  opacity: 1;
+}
+
+.burger-menu[enabled="true"][status="open"] .burger-menu__bar::before {
+  inset-block-start: 0;
+  transform: rotate(45deg);
+}
+
+.burger-menu[enabled="true"][status="open"] .burger-menu__bar::after {
+  inset-block-start: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu[enabled="true"][status="open"] .burger-menu__bar {
+  border-color: transparent;
+  background: transparent;
+  transform: rotate(90deg);
+}

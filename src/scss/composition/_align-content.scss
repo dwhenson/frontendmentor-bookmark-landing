@@ -1,0 +1,18 @@
+/* Center main content on page */
+$min: 1rem;
+$max: 1200px;
+
+.center-content {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: minmax($min, 1fr) minmax($min, $max) minmax($min, 1fr);
+
+  > * {
+    grid-column: 2;
+    block-size: min-content;
+  }
+
+  > footer {
+    align-self: end;
+  }
+}
