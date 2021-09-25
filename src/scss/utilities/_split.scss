@@ -3,15 +3,11 @@
 .split {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  gap: calc(var(--spacer) * 1);
+  gap: var(--bespoke-gap, var(--spacer));
 
   @include respond-to("medium") {
     flex-direction: row;
-    gap: calc(var(--spacer) * 2);
-  }
-
-  > * {
-    flex: 1;
   }
 }

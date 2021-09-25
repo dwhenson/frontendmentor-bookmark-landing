@@ -1,0 +1,15 @@
+.socials {
+  --bespoke-gap: calc(var(--spacer) * 1);
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  path {
+    transition: fill 150ms;
+  }
+
+  li:hover path {
+    fill: var(--clr-primary-100);
+  }
+}

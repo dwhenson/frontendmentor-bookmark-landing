@@ -1,0 +1,27 @@
+.cta {
+  align-items: center;
+  padding-block-start: calc(var(--spacer) * 5);
+  padding-block-end: calc(var(--spacer) * 5);
+  text-align: center;
+
+  @include respond-to("medium") {
+    --bespoke-gap: calc(var(--spacer) * 3);
+
+    text-align: start;
+
+    h2 {
+      flex: 1 0 14ch;
+    }
+
+    hr {
+      inline-size: 100%;
+      block-size: 1px;
+      border: 0;
+      background-color: var(--clr-secondary-200);
+    }
+
+    a {
+      flex: 0 0 auto;
+    }
+  }
+}

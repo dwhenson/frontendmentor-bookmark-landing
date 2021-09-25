@@ -1,9 +1,5 @@
 /* Add vertical rhythm inside elements */
 
 .flow-content > * + * {
-  margin-block-start: calc(var(--spacer) * 1);
-
-  // @include respond-to("medium") {
-  //   margin-block-start: calc(var(--spacer) * 1.5);
-  // }
+  margin-block-start: var(--bespoke-flow-spacer, calc(var(--spacer) * 2));
 }
