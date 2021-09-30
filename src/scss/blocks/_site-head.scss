@@ -1,0 +1,32 @@
+.site-head {
+  // padding-block-start: calc(var(--spacer) * 3);
+  // padding-block-end: calc(var(--spacer) * 3);
+  margin-block-start: max(4vh, 2rem);
+}
+
+.site-head__inner {
+  --bespoke-gap: calc(var(--spacer) * 2.5);
+  flex-direction: row;
+}
+
+.logo {
+  max-inline-size: min-content;
+}
+
+.nav-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  a {
+    display: block;
+    transition: color 150ms;
+    text-align: center;
+
+    &:hover,
+    &[data-state="active"],
+    &[aria-current="page"] {
+      color: var(--clr-primary-100);
+    }
+  }
+}

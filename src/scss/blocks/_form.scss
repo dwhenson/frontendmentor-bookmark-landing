@@ -1,0 +1,45 @@
+.form {
+  --bespoke-flow-spacer: 1em;
+
+  label,
+  input,
+  textarea {
+    display: block;
+    inline-size: 100%;
+  }
+
+  input,
+  textarea {
+    padding-block-start: clamp(0.5rem, 2.5%, 1rem);
+    padding-block-end: clamp(0.5rem, 2.5%, 1rem);
+    padding-inline-start: clamp(1rem, 5%, 2rem);
+    padding-inline-end: clamp(1rem, 5%, 2rem);
+    border: 0;
+    margin-block-start: 0.5em;
+    background-color: var(--clr-secondary-200);
+  }
+
+  textarea {
+    position: relative;
+
+    &::placeholder {
+      position: absolute;
+      inset-block-start: 1em;
+    }
+  }
+
+  .error-container {
+    min-block-size: 1.25em;
+    margin-block-start: 0.25em;
+  }
+
+  .error {
+    outline: 1px solid var(--clr-error-100);
+  }
+
+  .error-message {
+    font-size: 1em;
+    line-height: 1;
+    color: var(--clr-error-100);
+  }
+}

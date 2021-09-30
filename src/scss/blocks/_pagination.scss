@@ -1,0 +1,54 @@
+.pagination-buttons {
+  --bespoke-flow-spacer: 0.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: normal;
+  padding-block-start: 0;
+  padding-block-end: 0;
+}
+
+.h2 {
+  font-family: "Ibarra Real Nova", serif;
+  text-transform: none;
+}
+
+.text.previous,
+.text.next {
+  text-transform: none;
+}
+
+.paginate {
+  position: relative;
+  flex: 1 1 0;
+  padding-block-start: clamp(1rem, 5%, 2rem);
+  padding-block-end: clamp(1rem, 5%, 2rem);
+
+  @include respond-to("medium") {
+    padding-inline: clamp(1rem, 5%, 2rem);
+
+    .arrow {
+      position: absolute;
+      inset-block-start: 50%;
+      transform: translateY(-50%);
+
+      &.previous {
+        inset-inline-start: 0;
+      }
+
+      &.next {
+        inset-inline-end: 0;
+      }
+    }
+  }
+
+  &:hover * {
+    color: var(--clr-primary-100);
+  }
+}
+
+.paginate:last-of-type {
+  border-inline-start: 1px solid var(--clr-secondary-200);
+  text-align: end;
+}

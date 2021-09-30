@@ -1,0 +1,42 @@
+.portfolio {
+  @include respond-to("medium") {
+    // margin-block-start: clamp(2.5rem, 15%, 5rem);
+
+    li:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include respond-to("large") {
+    li:nth-of-type(odd) {
+      margin-inline-end: clamp(2.5rem, 15%, 5rem);
+    }
+
+    li:nth-of-type(even) {
+      margin-inline-start: clamp(2.5rem, 15%, 5rem);
+    }
+  }
+}
+
+.portfolio-item {
+  --bespoke-gap: clamp(2.5rem, 15%, 5rem);
+
+  align-items: unset;
+}
+
+@include respond-to("medium") {
+  .portfolio-image,
+  .portfolio-text {
+    flex: 1 1 100%;
+  }
+
+  .portfolio-image {
+    align-self: center;
+  }
+
+  .portfolio-text {
+    display: grid;
+    align-content: center;
+    max-inline-size: 45ch;
+  }
+}

@@ -28,4 +28,4 @@ I would very much welcome advice on the following issues:
 
 ## Resources
 
-- 🔗 TBC.
+- 🔗 https://inclusive-components.design/tabbed-interfaces/

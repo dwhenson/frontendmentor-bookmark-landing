@@ -4,8 +4,9 @@ $max: 1440px;
 
 .align-content {
   display: grid;
-  grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax($min, 1fr) minmax($min, $max) minmax($min, 1fr);
+  grid-template-rows: auto 1fr auto;
+  // align-content: space-between;
 
   > * {
     grid-column: 2;

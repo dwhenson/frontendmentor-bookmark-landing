@@ -1,0 +1,19 @@
+.hero {
+  display: grid;
+  gap: var(--spacer);
+
+  @include respond-to("medium") {
+    .hero-image,
+    .hero-text {
+      grid-area: 1 / 1 / -1 / -1;
+    }
+
+    .hero-text {
+      align-self: end;
+      inline-size: 50ch;
+      padding-block-start: clamp(1rem, 5%, 2rem);
+      padding-inline-end: clamp(1rem, 5%, 2rem);
+      background-color: var(--clr-secondary-100);
+    }
+  }
+}

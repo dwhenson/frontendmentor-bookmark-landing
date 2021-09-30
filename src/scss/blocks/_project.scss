@@ -1,0 +1,48 @@
+.project {
+  display: grid;
+  gap: max(8vh, 2rem);
+  // margin-block-start: clamp(2.5rem, 15%, 5rem);
+
+  @include respond-to("large") {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1.5fr;
+
+    .project-hero {
+      grid-area: 1 / -1 / 1 / 1;
+    }
+  }
+}
+
+.project-intro {
+  display: grid;
+  gap: var(--spacer) clamp(2.5rem, 15%, 5rem);
+
+  @include respond-to("medium") {
+    grid-template-columns: 1fr 1fr;
+    align-self: start;
+
+    .button,
+    .roles {
+      grid-column: 1;
+    }
+
+    .summary {
+      grid-area: 1 / 2 / 4 / -1;
+      align-self: start;
+      margin-block-start: 0;
+    }
+  }
+
+  @include respond-to("large") {
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+
+    .summary {
+      grid-area: auto;
+    }
+  }
+
+  .roles {
+    color: var(--clr-primary-100);
+  }
+}

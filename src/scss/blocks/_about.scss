@@ -1,0 +1,33 @@
+.about {
+  --bespoke-gap: 2em;
+
+  @include respond-to("medium") {
+    --bespoke-gap: clamp(3rem, 20%, 8rem);
+
+    align-items: unset;
+    justify-content: unset;
+  }
+}
+
+.about-text {
+  @include respond-to("medium") {
+    // flex: 1 1 60%;
+  }
+}
+
+.about-text,
+.about-image {
+  flex-basis: 50%;
+}
+
+@include respond-to("medium") {
+  .about-image {
+    align-self: center;
+  }
+
+  .about-text {
+    display: grid;
+    align-content: center;
+    max-inline-size: 45ch;
+  }
+}

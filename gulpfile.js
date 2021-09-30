@@ -13,35 +13,35 @@ const imagemin = require("gulp-imagemin");
 const paths = {
   html: {
     src: "./src/**/*.html",
-    dest: "./dist",
+    dest: "./public",
   },
   scss: {
     src: "./src/scss/**/*.scss",
-    dest: "./dist/css",
+    dest: "./public/css",
   },
   js: {
     root: "./src/js/*.js",
     src: "./src/js/**/*.js",
-    dest: "./dist/js",
+    dest: "./public/js",
   },
   img: {
     src: "./src/images/**/*",
-    dest: "./dist/images",
+    dest: "./public/images",
   },
   fonts: {
     src: "./src/fonts/**/*",
-    dest: "./dist/fonts",
+    dest: "./public/fonts",
   },
 };
 
 /* Development
    ================================================== */
-// Copy html files to dest
+// Copy html files to public
 function htmlDevelopmentTask() {
   return src(paths.html.src).pipe(dest(paths.html.dest));
 }
 
-// Combine and add css file to dest (and update browser)
+// Combine and add css file to public (and update browser)
 function cssDevelopmentTask() {
   return src(paths.scss.src)
     .pipe(
@@ -65,7 +65,7 @@ function cssDevelopmentTask() {
     .pipe(browserSync.stream());
 }
 
-// Combine and add js file to dest
+// Combine and add js file to public
 function jsDevelopmentTask() {
   return src(paths.js.root)
     .pipe(
@@ -84,12 +84,12 @@ function jsDevelopmentTask() {
     .pipe(dest(paths.js.dest));
 }
 
-// Copy image files to dest
+// Copy image files to public
 function imgDevelopmentTask() {
   return src(paths.img.src).pipe(dest(paths.img.dest));
 }
 
-// Copy font files to dest
+// Copy font files to public
 function fontDevelopmentTask() {
   return src(paths.fonts.src).pipe(dest(paths.fonts.dest));
 }
@@ -98,7 +98,7 @@ function fontDevelopmentTask() {
 function server() {
   browserSync.init({
     server: {
-      baseDir: "./dest",
+      baseDir: "./public",
       open: true,
       notify: false,
     },
@@ -112,12 +112,12 @@ function server() {
 /* Production
    ================================================== */
 
-// Delete dest folder
+// Delete public folder
 function cleanTask() {
-  return src("./dest", { allowEmpty: true, read: false }).pipe(clean());
+  return src("./public", { allowEmpty: true, read: false }).pipe(clean());
 }
 
-// Copy html files to dest
+// Copy html files to public
 function htmlProductionTask() {
   return src(paths.html.src)
     .pipe(sourcemaps.init())
@@ -175,7 +175,7 @@ function imgProductionTask() {
     .pipe(dest(paths.img.dest));
 }
 
-// Copy font files to dest
+// Copy font files to public
 function fontProductionTask() {
   return src(paths.fonts.src).pipe(dest(paths.fonts.dest));
 }
