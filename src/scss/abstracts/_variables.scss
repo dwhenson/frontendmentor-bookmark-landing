@@ -3,25 +3,25 @@
 
 :root {
   /* Colors */
-  --clr-primary-100: hsla(167, 36%, 52%, 1);
-  --clr-primary-200: hsla(205, 41%, 21%, 1);
-  --clr-primary-300: hsla(245, 10%, 22%, 1);
-  --clr-secondary-100: hsla(0, 0%, 98%, 1);
-  --clr-secondary-200: hsla(240, 3%, 92%, 1);
-  --clr-error-100: hsla(0, 90%, 57%, 1);
+  --clr-primary-100: hsl(0, 94.152%, 66.471%);
+  --clr-primary-200: hsl(231.06, 68.78%, 59.804%);
+  --clr-secondary-000: hsl(0, 0%, 96.863%);
+  --clr-secondary-100: hsl(229.41, 8.3744%, 100%);
+  --clr-secondary-200: hsl(229.41, 8.3744%, 60.196%);
+  --clr-secondary-300: hsl(229.09, 31.429%, 20.588%);
 
   /* Spacing */
-  --spacer: 1em;
+  --spacer: 1rem;
 
   /* Font sizes */
   --step--1: clamp(0.89rem, 0.87rem + 0.07vw, 0.94rem);
   --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.13rem);
-  --step-1: clamp(1.13rem, 1.06rem + 0.32vw, 1.35rem);
+  --step-1: clamp(1.13rem, 1.06rem + 0.32vw, 1.38rem);
   // --step-2: clamp(1.27rem, 1.16rem + 0.51vw, 1.62rem);
   // --step-3: clamp(1.42rem, 1.28rem + 0.74vw, 1.94rem);
   --step-2: clamp(1.6rem, 1.39rem + 1.04vw, 2.33rem);
   // --step-3: clamp(1.8rem, 1.52rem + 1.43vw, 2.8rem);
-  --step-3: clamp(2.03rem, 1.65rem + 1.9vw, 3.36rem);
-  --step-4: clamp(2.28rem, 1.78rem + 2.5vw, 4.03rem);
+  // --step-3: clamp(2.03rem, 1.65rem + 1.9vw, 3.36rem);
+  // --step-4: clamp(2.28rem, 1.78rem + 2.5vw, 4.03rem);
   // --step-8: clamp(2.57rem, 1.92rem + 3.25vw, 4.84rem);
 }

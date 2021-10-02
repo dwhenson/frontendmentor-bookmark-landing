@@ -9,53 +9,80 @@
 
 /* Base Styles
    ================================================== */
-body {
-  overflow-x: hidden;
-  // background-color: red;
-  // font-size: var(--step-0);
+
+@font-face {
+  font-family: "rubik";
   font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src: local("rubik-Regular"), url("../fonts/rubik/rubik-regular.ttf") format("truetype");
 }
 
-// h1,
-// .h1 {
-//   font-size: var(--step-3);
-// }
+@font-face {
+  font-family: "rubik";
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: local("rubik-Bold"), url("../fonts/rubik/rubik-500.ttf") format("truetype");
+}
 
-// h2,
-// .h2 {
-//   font-size: var(--step-2);
-// }
+body {
+  overflow-x: hidden;
+  font-family: "rubik", sans-serif;
+  font-size: var(--step-0);
+  font-weight: 400;
+  color: var(--clr-secondary-200);
+}
 
-// h3 {
-//   font-size: var(--step-1);
-// }
+h1,
+.h1 {
+  font-size: var(--step-2);
+  color: var(--clr-secondary-300);
+}
 
-// /* ==================================================
-//   Composition
-//   ================================================== */
+h2,
+.h2 {
+  font-size: var(--step-1);
+  color: var(--clr-secondary-300);
+}
+
+h3,
+.h3 {
+  font-size: var(--step-0);
+  color: var(--clr-secondary-300);
+}
+
+a {
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   Composition
+   ================================================== */
 
 @import "composition/align-content";
 
-// /* ==================================================
-//   Utilities
-//   ================================================== */
+/* ==================================================
+   Utilities
+   ================================================== */
 
-// @import "utilities/borders";
 @import "utilities/container";
 @import "utilities/flow-content";
 @import "utilities/flow-section";
 @import "utilities/outline";
+@import "utilities/full-width";
 @import "utilities/skip-link";
 @import "utilities/split";
 @import "utilities/visually-hidden";
 
-// /* ==================================================
-//    Blocks
-//    ================================================== */
+/* ==================================================
+   Blocks
+   ================================================== */
 
-// @import "blocks/site-head";
-// @import "blocks/burger-menu";
-// @import "blocks/button";
-// @import "blocks/cta";
-// @import "blocks/site-foot";
-// @import "blocks/socials";
+@import "blocks/site-head";
+@import "blocks/burger-menu";
+@import "blocks/button";
+@import "blocks/site-foot";
+@import "blocks/socials";
