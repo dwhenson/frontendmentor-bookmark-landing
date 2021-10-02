@@ -1,0 +1,17 @@
+.contact {
+  --bespoke-flow-spacer: calc(var(--spacer) * 2);
+
+  background-color: var(--clr-primary-200);
+  color: var(--clr-secondary-100);
+
+  .sub-heading {
+    margin-block-start: calc(var(--spacer) * 6);
+    font-size: var(--step--1);
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: var(--clr-secondary-100);
+  }
+}
