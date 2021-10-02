@@ -76,8 +76,9 @@ a {
 @import "utilities/container";
 @import "utilities/flow-content";
 @import "utilities/flow-section";
-@import "utilities/outline";
 @import "utilities/full-width";
+@import "utilities/intro";
+@import "utilities/outline";
 @import "utilities/skip-link";
 @import "utilities/split";
 @import "utilities/visually-hidden";
@@ -86,9 +87,10 @@ a {
    Blocks
    ================================================== */
 
+@import "blocks/button";
 @import "blocks/site-head";
 @import "blocks/burger-menu";
 @import "blocks/hero";
-@import "blocks/button";
+@import "blocks/extensions";
 @import "blocks/site-foot";
 @import "blocks/socials";
