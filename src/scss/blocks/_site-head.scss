@@ -1,6 +1,4 @@
 .site-head {
-  // padding-block-start: calc(var(--spacer) * 3);
-  // padding-block-end: calc(var(--spacer) * 3);
   margin-block-start: max(4vh, 2rem);
 }
 
@@ -11,6 +9,8 @@
 
 .logo {
   max-inline-size: min-content;
+  // Optical adjustment to center logo
+  margin-block-start: 10px;
 }
 
 .nav-list {
@@ -18,15 +18,20 @@
   flex-wrap: wrap;
   justify-content: flex-end;
 
-  a {
+  a:not(.login) {
     display: block;
     transition: color 150ms;
+    font-weight: 500;
     text-align: center;
+    color: var(--clr-secondary-300);
 
-    &:hover,
-    &[data-state="active"],
-    &[aria-current="page"] {
+    &:hover {
       color: var(--clr-primary-100);
     }
+  }
+
+  .login {
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 }
