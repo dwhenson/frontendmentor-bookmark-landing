@@ -1,19 +1,42 @@
 .hero {
-  display: grid;
-  gap: var(--spacer);
+  --bespoke-gap: calc(var(--spacer) * 4);
 
   @include respond-to("medium") {
-    .hero-image,
-    .hero-text {
-      grid-area: 1 / 1 / -1 / -1;
-    }
+    flex-direction: row-reverse;
 
     .hero-text {
-      align-self: end;
-      inline-size: 50ch;
-      padding-block-start: clamp(1rem, 5%, 2rem);
-      padding-inline-end: clamp(1rem, 5%, 2rem);
-      background-color: var(--clr-secondary-100);
+      margin-block-start: calc(var(--spacer) * 3);
+    }
+
+    .hero-text,
+    .hero-image {
+      flex-basis: 100%;
+    }
+  }
+
+  h1 {
+    max-inline-size: 20ch;
+  }
+
+  p {
+    max-inline-size: 50ch;
+  }
+
+  .buttons {
+    --bespoke-gap: calc(var(--spacer) * 1);
+    flex-direction: row;
+    margin-block-start: calc(var(--spacer) * 3);
+
+    @include respond-to("medium") {
+      justify-content: flex-start;
+    }
+
+    .button {
+      flex: 1 1 auto;
+
+      @include respond-to("medium") {
+        flex: 0 1 auto;
+      }
     }
   }
 }

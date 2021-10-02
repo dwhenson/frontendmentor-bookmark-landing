@@ -31,7 +31,12 @@ body {
   font-family: "rubik", sans-serif;
   font-size: var(--step-0);
   font-weight: 400;
+  text-align: center;
   color: var(--clr-secondary-200);
+
+  @include respond-to("medium") {
+    text-align: start;
+  }
 }
 
 h1,
@@ -83,6 +88,7 @@ a {
 
 @import "blocks/site-head";
 @import "blocks/burger-menu";
+@import "blocks/hero";
 @import "blocks/button";
 @import "blocks/site-foot";
 @import "blocks/socials";

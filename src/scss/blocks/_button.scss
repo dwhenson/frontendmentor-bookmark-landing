@@ -58,8 +58,3 @@
     --fg: var(--clr-secondary-100);
   }
 }
-
-// Add spacing between adjcent buttons
-.button + .button {
-  margin-inline-start: var(--spacer);
-}
