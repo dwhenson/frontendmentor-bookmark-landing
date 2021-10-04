@@ -1,45 +1,56 @@
 .form {
-  --bespoke-flow-spacer: 1em;
+  --bespoke-flow-spacer: 2em;
 
-  label,
-  input,
-  textarea {
-    display: block;
-    inline-size: 100%;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  inline-size: min(100%, 70ch);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 
-  input,
-  textarea {
-    padding-block-start: clamp(0.5rem, 2.5%, 1rem);
-    padding-block-end: clamp(0.5rem, 2.5%, 1rem);
-    padding-inline-start: clamp(1rem, 5%, 2rem);
-    padding-inline-end: clamp(1rem, 5%, 2rem);
-    border: 0;
-    margin-block-start: 0.5em;
-    background-color: var(--clr-secondary-200);
-  }
-
-  textarea {
+  .input-wrapper {
     position: relative;
+    flex: 9999 1 auto;
+    min-inline-size: min(100%, 50ch);
+  }
 
-    &::placeholder {
-      position: absolute;
-      inset-block-start: 1em;
-    }
+  input {
+    inline-size: 100%;
+    padding-block-start: 0.55em;
+    padding-block-end: 0.55em;
+    padding-inline-start: 1em;
+    border: solid 2px var(--clr-primary-200);
+    border-radius: 0.5em;
+    background-color: var(--clr-secondary-000);
+  }
+
+  .contact-button {
+    flex: 1 0 auto;
   }
 
   .error-container {
-    min-block-size: 1.25em;
-    margin-block-start: 0.25em;
+    position: absolute;
+    display: none;
+    inset-block-end: -1.65rem;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    min-block-size: 1em;
+    padding: 0.15em;
+    padding-inline-start: 1rem;
+    border: solid 2px var(--clr-primary-100);
+    border-radius: 0 0 0.5em 0.5em;
+    background-color: var(--clr-primary-100);
+    text-align: start;
   }
 
   .error {
-    outline: 1px solid var(--clr-error-100);
+    outline: 1px solid var(--clr-primary-100);
   }
 
   .error-message {
-    font-size: 1em;
-    line-height: 1;
-    color: var(--clr-error-100);
+    font-size: var(--step--1);
+    color: var(--clr-seconday-000);
   }
 }
