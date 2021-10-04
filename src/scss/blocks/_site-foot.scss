@@ -1,36 +1,39 @@
 .site-foot {
+  --bespoke-gap: calc(var(--spacer) * 3);
+
   grid-column: 1 / -1;
-  padding-block-start: calc(var(--spacer) * 4);
-  padding-block-end: calc(var(--spacer) * 4);
-  background-color: var(--clr-primary-300);
-  color: var(--clr-secondary-100);
-
-  @include respond-to("medium") {
-    padding-block-start: calc(var(--spacer) * 2);
-    padding-block-end: calc(var(--spacer) * 2);
-  }
-
-  .site-foot__inner {
-    --bespoke-gap: calc(var(--spacer) * 2);
-  }
-
-  nav {
-    --bespoke-gap: calc(var(--spacer) * 2);
-
-    a {
-      display: block;
-      transition: color 150ms;
-      text-align: center;
-
-      &:hover {
-        color: var(--clr-primary-100);
-      }
-    }
-  }
+  padding-block-start: calc(var(--spacer) * 2);
+  padding-block-end: calc(var(--spacer) * 2);
+  margin-block-start: 0;
+  background-color: var(--clr-secondary-300);
+  color: var(--clr-secondary-000);
 
   .logo path {
     transition: fill 150ms;
-    fill: var(--clr-secondary-100);
+    fill: var(--clr-secondary-000);
+  }
+
+  .logo:hover path {
+    fill: var(--clr-primary-100);
+  }
+
+  a {
+    display: block;
+    transition: color 150ms;
+    text-align: center;
+    color: var(--clr-secondary-000);
+
+    &:hover {
+      color: var(--clr-primary-100);
+    }
+  }
+
+  .socials {
+    --bespoke-gap: calc(var(--spacer) * 3);
+
+    path {
+      transition: fill 150ms;
+    }
 
     &:hover {
       fill: var(--clr-primary-100);
