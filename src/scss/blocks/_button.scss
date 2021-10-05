@@ -13,13 +13,13 @@
     color 150ms;
   letter-spacing: 0;
   text-transform: none;
-  color: var(--fg, var(--clr-secondary-100));
+  color: var(--fg, var(--clr-secondary-000));
   cursor: pointer;
   padding-inline: 1.5em;
 
   &:focus,
   &:hover {
-    --bg: var(--clr-secondary-100);
+    --bg: var(--clr-secondary-000);
     --fg: var(--clr-primary-200);
 
     transform: scale(1.025);
@@ -27,18 +27,18 @@
 
   &:active {
     --bg: var(--clr-primary-100);
-    --fg: var(--clr-secondary-100);
+    --fg: var(--clr-secondary-000);
   }
 }
 
 .accent {
   --bd: var(--clr-primary-100);
   --bg: var(--clr-primary-100);
-  --fg: var(--clr-secondary-100);
+  --fg: var(--clr-secondary-000);
 
   &:focus,
   &:hover {
-    --bg: var(--clr-secondary-100);
+    --bg: var(--clr-secondary-000);
     --fg: var(--clr-primary-100);
   }
 

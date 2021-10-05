@@ -1,0 +1,38 @@
+.faq {
+  --bespoke-flow-spacer: calc(var(--spacer) * 3);
+  max-inline-size: 50rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  text-align: start;
+
+  details > summary {
+    padding-block-start: 1.5em;
+    padding-block-end: 1.5em;
+    border-block-start: 1px solid var(--clr-secondary-100);
+    transition: color 150ms;
+    list-style: none;
+    font-weight: 500;
+    color: var(--clr-secondary-300);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--clr-primary-100);
+    }
+  }
+
+  details > p {
+    padding-block-end: 1.5em;
+    border-block-end: 1px solid var(--clr-secondary-100);
+    line-height: 2;
+  }
+
+  details[open] > summary {
+    // background-color: #ccf;
+  }
+
+  .button {
+    display: block;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+}

@@ -1,14 +1,13 @@
 .tabbed {
-  --bespoke-flow-spacer: calc(var(--spacer) * 4);
+  --bespoke-flow-spacer: calc(var(--spacer) * 3);
 }
 
 [role="tablist"] {
-  border-bottom: 2px solid var(--clr-secondary-200);
+  border-block-end: 1px solid var(--clr-secondary-100);
 
   @include respond-to("medium") {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    inline-size: fit-content;
+    margin-inline: auto;
   }
 }
 
@@ -17,17 +16,20 @@
     display: inline-block;
   }
 
+  // FIXME: make all links the same size
   a {
-    text-transform: none;
     display: inline-block;
+    min-inline-size: 18rem;
     padding: 1.5rem 3rem;
+    text-align: center;
+    text-transform: none;
     color: var(--clr-secondary-200);
   }
 }
 
 [role="tablist"] [aria-selected] {
+  border-block-end: 4px solid var(--clr-primary-100);
   color: var(--clr-secondary-300);
-  border-bottom: 4px solid var(--clr-primary-100);
 }
 
 .tab-wrapper {
@@ -45,14 +47,15 @@
     display: grid;
     flex-basis: 100%;
 
-    // FIXME: svgs fucked as usual
+    // FIXME: svgs a total mess as usual
     svg {
       justify-self: end;
-      max-width: 100%;
+      max-inline-size: 100%;
     }
   }
 }
 
+// FIXME: refactor to usual media query
 @media (max-width: 550px) {
   .tab-wrapper {
     flex-direction: column-reverse;
@@ -60,9 +63,9 @@
 
   [role="tablist"] li,
   [role="tablist"] a {
-    display: block;
     position: static;
-    border-top: 1px solid var(--clr-secondary-200);
+    display: block;
+    border-block-start: 0.5px solid var(--clr-secondary-100);
   }
 
   [role="tablist"] [aria-selected] {
