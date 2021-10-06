@@ -12,6 +12,7 @@
   transition: transform 350ms cubic-bezier(0, 0.26, 0.13, 1.55), background-color 150ms,
     color 150ms;
   letter-spacing: 0;
+  text-align: center;
   text-transform: none;
   color: var(--fg, var(--clr-secondary-000));
   cursor: pointer;
@@ -49,13 +50,14 @@
 }
 
 .diminish {
-  --bd: var(--clr-secondary-300);
-  --bg: var(--clr-secondary-000);
+  --bd: var(--clr-secondary-100);
+  --bg: var(--clr-secondary-100);
   --fg: var(--clr-secondary-300);
 
   &:focus,
   &:hover {
-    --bg: var(--clr-secondary-100);
+    --bd: var(--clr-secondary-300);
+    --bg: var(--clr-secondary-000);
     --fg: var(--clr-secondary-300);
   }
 

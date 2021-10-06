@@ -1,74 +1,61 @@
 .tabbed {
-  --bespoke-flow-spacer: calc(var(--spacer) * 3);
+	--bespoke-flow-spacer: calc(var(--spacer) * 3);
 }
 
 [role="tablist"] {
-  border-block-end: 1px solid var(--clr-secondary-100);
+	display: flex;
+	flex-direction: column-reverse;
+	border-block-end: 1px solid var(--clr-secondary-100);
 
-  @include respond-to("medium") {
-    inline-size: fit-content;
-    margin-inline: auto;
-  }
+	@include respond-to("medium") {
+		flex-direction: row;
+		inline-size: fit-content;
+		margin-inline: auto;
+	}
 }
 
 [role="tablist"] {
-  li {
-    display: inline-block;
-  }
+	li {
+		border-block-start: 0.5px solid var(--clr-secondary-100);
 
-  // FIXME: make all links the same size
-  a {
-    display: inline-block;
-    min-inline-size: 18rem;
-    padding: 1.5rem 3rem;
-    text-align: center;
-    text-transform: none;
-    color: var(--clr-secondary-200);
-  }
+		@include respond-to("medium") {
+			border-block-start: 0;
+		}
+	}
+
+	a {
+		display: inline-block;
+		min-inline-size: 18rem;
+		padding: 1.5rem 3rem;
+		text-align: center;
+		text-transform: none;
+		color: var(--clr-secondary-200);
+	}
 }
 
 [role="tablist"] [aria-selected] {
-  border-block-end: 4px solid var(--clr-primary-100);
-  color: var(--clr-secondary-300);
+	border-block-end: 4px solid var(--clr-primary-100);
+	color: var(--clr-secondary-300);
 }
 
 .tab-wrapper {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: calc(var(--spacer) * 4);
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	gap: calc(var(--spacer) * 4);
 
-  > .tab-text {
-    --bespoke-flow-spacer: calc(var(--spacer) * 1);
-    flex-basis: 100%;
-  }
+	> .tab-text {
+		--bespoke-flow-spacer: calc(var(--spacer) * 1);
+		flex-basis: 100%;
+	}
 
-  > .tab-image {
-    display: grid;
-    flex-basis: 100%;
+	> .tab-image {
+		display: grid;
+		flex-basis: 100%;
 
-    // FIXME: svgs a total mess as usual
-    svg {
-      justify-self: end;
-      max-inline-size: 100%;
-    }
-  }
-}
-
-// FIXME: refactor to usual media query
-@media (max-width: 550px) {
-  .tab-wrapper {
-    flex-direction: column-reverse;
-  }
-
-  [role="tablist"] li,
-  [role="tablist"] a {
-    position: static;
-    display: block;
-    border-block-start: 0.5px solid var(--clr-secondary-100);
-  }
-
-  [role="tablist"] [aria-selected] {
-    position: static;
-  }
+		svg {
+			justify-self: end;
+			max-inline-size: 100%;
+		}
+	}
 }
