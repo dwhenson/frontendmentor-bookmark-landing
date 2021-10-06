@@ -4,10 +4,6 @@
   @include respond-to("medium") {
     flex-direction: row-reverse;
 
-    .hero-text {
-      margin-block-start: calc(var(--spacer) * 3);
-    }
-
     .hero-text,
     .hero-image {
       flex-basis: 100%;
@@ -15,11 +11,46 @@
   }
 
   h1 {
-    max-inline-size: 20ch;
+    @include respond-to("medium") {
+      max-inline-size: 20ch;
+    }
   }
 
   p {
-    max-inline-size: 50ch;
+    @include respond-to("medium") {
+      max-inline-size: 50ch;
+    }
+  }
+
+  .hero-image {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset-block-end: 0;
+      inline-size: 80vw;
+      block-size: 60%;
+      border-radius: 20rem 0 0 20rem;
+      margin-inline-start: calc(50% - 50vw);
+      background-color: var(--clr-primary-200);
+
+      @include respond-to("medium") {
+        inline-size: 55vw;
+        block-size: 100%;
+        transform: translate(65%, 20%);
+      }
+    }
+
+    img {
+      filter: drop-shadow(0 0.7px 2.2px rgba(0, 0, 0, 0.02))
+        drop-shadow(1.7px 5.3px rgba(0, 0, 0, 0.028))
+        drop-shadow(0 3.1px 10px rgba(0, 0, 0, 0.035))
+        drop-shadow(0 5.6px 17.9px rgba(0, 0, 0, 0.042))
+        drop-shadow(0 10.4px 33.4px rgba(0, 0, 0, 0.05))
+        drop-shadow(0 25px 80px rgba(0, 0, 0, 0.07));
+    }
   }
 
   .buttons {

@@ -40,9 +40,13 @@
 
 .tab-wrapper {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   align-items: center;
   gap: calc(var(--spacer) * 4);
+
+  @include respond-to("medium") {
+    flex-direction: row-reverse;
+  }
 
   > .tab-text {
     --bespoke-flow-spacer: calc(var(--spacer) * 1);
