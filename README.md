@@ -25,6 +25,7 @@ I would very much welcome advice on the following issues:
 ## Future learning
 
 - 🙇‍♂️ SVGS are still killing me - viewBox makes them responsive!
+  Fucking psudeo elements
 
 ## Resources
 

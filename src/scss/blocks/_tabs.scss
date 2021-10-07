@@ -1,5 +1,24 @@
 .tabbed {
   --bespoke-flow-spacer: calc(var(--spacer) * 3);
+  position: relative;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: -1;
+  //   inline-size: 60vw;
+  //   block-size: 45%;
+  //   border-radius: 0 20rem 20rem 0;
+  //   margin-inline-start: calc(50% - 50vw);
+  //   background-color: var(--clr-primary-200);
+  //   transform: translate(-45%, 5%);
+
+  //   @include respond-to("medium") {
+  //     inline-size: 65vw;
+  //     block-size: 25rem;
+  //     transform: translate(-45%, 5%);
+  //   }
+  // }
 }
 
 [role="tablist"] {
@@ -27,9 +46,14 @@
     display: inline-block;
     min-inline-size: 18rem;
     padding: 1.5rem 3rem;
+    transition: color 150ms;
     text-align: center;
     text-transform: none;
     color: var(--clr-secondary-200);
+
+    &:hover {
+      color: var(--clr-primary-100);
+    }
   }
 }
 

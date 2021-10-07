@@ -7,14 +7,15 @@
 .burger-menu__bar::before,
 .burger-menu__bar::after {
   position: absolute;
+  z-index: 10;
   display: block;
   inset-inline-start: 50%;
   inline-size: 24px;
   block-size: 3px;
-  border: 1px solid var(--clr-primary-300);
+  border: 1px solid var(--clr-secondary-300);
   border-radius: 3px;
   margin-inline-start: -12px;
-  background: var(--clr-primary-300);
+  background: var(--clr-secondary-300);
   transition: transform 350ms ease-in-out;
 }
 
@@ -40,7 +41,7 @@
 .burger-menu[enabled="true"] .burger-menu__trigger {
   position: relative;
   display: block;
-  inset-block-start: -8px;
+  // inset-block-start: -8px;
   inline-size: 2rem;
   block-size: 2rem;
   border: 0;
@@ -54,20 +55,23 @@
   z-index: 1;
   visibility: hidden;
   opacity: 0;
-  inset-inline-start: 1em;
-  inline-size: calc(100% - 2em);
-  block-size: 100%;
-  padding-block-start: max(8vh, 2rem);
+  inset-block-start: 0;
+  // inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  // inline-size: calc(100% - 2em);
+  block-size: 100vh;
+  // padding-block-start: max(8vh, 2rem);
   overflow-y: auto;
-  padding-inline: clamp(1rem, 2.5%, 2rem);
+  // padding-inline: clamp(1rem, 2.5%, 2rem);
   -webkit-overflow-scrolling: touch;
+  background-color: var(--clr-secondary-300);
 }
 
 // Hamburger menu panel content size and positioning
 .burger-menu[enabled="true"] .navigation {
   padding: 2rem;
-  box-shadow: 0 1em 1em hsla(245, 10%, 22%, 0.7);
-  background-color: var(--clr-primary-300);
+  // box-shadow: 0 1em 1em hsla(245, 10%, 22%, 0.7);
 
   ul {
     flex-direction: column;
@@ -78,7 +82,7 @@
   }
 
   a {
-    color: var(--clr-secondary-100);
+    color: var(--clr-secondary-000);
   }
 }
 

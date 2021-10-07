@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Bookmark landing page</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- <script async src=""></script> -->
+    <script defer src="js/index.js"></script>
   </head>
 
   <body class="align-content flow-section">
@@ -74,7 +74,9 @@
         <div class="tabbed flow-content">
           <ul role="tablist">
             <li role="presentation">
-              <a href="#section-simple" role="tab" aria-selected="true">Simple Bookmarking</a>
+              <a href="#section-simple" role="tab" aria-selected="true"
+                >Simple Bookmarking</a
+              >
             </li>
             <li role="presentation">
               <a href="#section-speedy" role="tab">Speedy Searching</a>
@@ -716,10 +718,9 @@
                   </g>
                 </svg>
               </div>
-              </div>
-            </section>
-
-          </div>
+            </div>
+          </section>
+        </div>
       </section>
 
       <section class="[ extensions ] [ flow-content ]">
@@ -803,7 +804,12 @@
 
         <div class="details">
           <details>
-            <summary>What is Bookmark?</summary>
+            <summary>
+              <h3>What is Bookmark?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
+              </svg>
+            </summary>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
               justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare
@@ -811,7 +817,11 @@
             </p>
           </details>
           <details>
-            <summary>How can I request a new browser?</summary>
+            <summary><h3>How can I request a new browser?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+              <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
+            </svg>
+            </summary>
             <p>
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
               ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
@@ -821,7 +831,11 @@
             </p>
           </details>
           <details>
-            <summary>Is there a mobile app?</summary>
+            <summary><h3>Is there a mobile app?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+              <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
+            </svg>
+            </summary>
             <p>
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
               dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra
@@ -829,7 +843,11 @@
             </p>
           </details>
           <details>
-            <summary>What about other Chromium browsers?</summary>
+            <summary><h3>What about other Chromium browsers?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+              <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
+            </svg>
+            </summary>
             <p>
               Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
               euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut
@@ -917,79 +935,86 @@
     </footer>
     <script>
       // Get relevant elements and collections
-        const tabbed = document.querySelector('.tabbed');
-        const tablist = tabbed.querySelector('ul');
-        const tabs = tablist.querySelectorAll('a');
-        const panels = tabbed.querySelectorAll('[id^="section"]');
+      const tabbed = document.querySelector(".tabbed");
+      const tablist = tabbed.querySelector("ul");
+      const tabs = tablist.querySelectorAll("a");
+      const panels = tabbed.querySelectorAll('[id^="section"]');
 
+      const switchTab = (oldTab, newTab) => {
+        newTab.focus();
+        // Make the active tab focusable by the user (Tab key)
+        newTab.removeAttribute("tabindex");
+        // Set the selected state
+        newTab.setAttribute("aria-selected", "true");
+        oldTab.removeAttribute("aria-selected");
+        oldTab.setAttribute("tabindex", "-1");
+        // Get the indices of the new and old tabs to find the correct
+        // tab panels to show and hide
+        const index = Array.prototype.indexOf.call(tabs, newTab);
+        const oldIndex = Array.prototype.indexOf.call(tabs, oldTab);
+        panels[oldIndex].hidden = true;
+        panels[index].hidden = false;
+      };
 
-        const switchTab = (oldTab, newTab) => {
-          newTab.focus();
-          // Make the active tab focusable by the user (Tab key)
-          newTab.removeAttribute('tabindex');
-          // Set the selected state
-          newTab.setAttribute('aria-selected', 'true');
-          oldTab.removeAttribute('aria-selected');
-          oldTab.setAttribute('tabindex', '-1');
-          // Get the indices of the new and old tabs to find the correct
-          // tab panels to show and hide
-          const index = Array.prototype.indexOf.call(tabs, newTab);
-          const oldIndex = Array.prototype.indexOf.call(tabs, oldTab);
-          panels[oldIndex].hidden = true;
-          panels[index].hidden = false;
-        }
+      // Add the tablist role to the first <ul> in the .tabbed container
+      tablist.setAttribute("role", "tablist");
 
-        // Add the tablist role to the first <ul> in the .tabbed container
-        tablist.setAttribute('role', 'tablist');
+      // Add semantics are remove user focusability for each tab
+      Array.prototype.forEach.call(tabs, (tab, index_) => {
+        tab.setAttribute("role", "tab");
+        tab.setAttribute("id", "tab" + (index_ + 1));
+        tab.setAttribute("tabindex", "-1");
+        tab.parentNode.setAttribute("role", "presentation");
 
-        // Add semantics are remove user focusability for each tab
-        Array.prototype.forEach.call(tabs, (tab, index_) => {
-    tab.setAttribute('role', 'tab');
-    tab.setAttribute('id', 'tab' + (index_ + 1));
-    tab.setAttribute('tabindex', '-1');
-    tab.parentNode.setAttribute('role', 'presentation');
-
-    // Handle clicking of tabs for mouse users
-    tab.addEventListener('click', e => {
-      e.preventDefault();
-      const currentTab = tablist.querySelector('[aria-selected]');
-      if (e.currentTarget !== currentTab) {
-        switchTab(currentTab, e.currentTarget);
-      }
-    });
-
-    // Handle keydown events for keyboard users
-    tab.addEventListener('keydown', e => {
-      // Get the index of the current tab in the tabs node list
-      const index = Array.prototype.indexOf.call(tabs, e.currentTarget);
-      // Work out which key the user is pressing and
-      // Calculate the new tab's index where appropriate
-      const dir = e.which === 37 ? index - 1 : (e.which === 39 ? index + 1 : e.which === 40 ? 'down' : null);
-      if (dir !== null) {
-        e.preventDefault();
-        // If the down key is pressed, move focus to the open panel,
-        // otherwise switch to the adjacent tab
-        dir === 'down' ? panels[index_].focus() : (tabs[dir] ? switchTab(e.currentTarget, tabs[dir]) : void 0);
-            }
-          });
+        // Handle clicking of tabs for mouse users
+        tab.addEventListener("click", (e) => {
+          e.preventDefault();
+          const currentTab = tablist.querySelector("[aria-selected]");
+          if (e.currentTarget !== currentTab) {
+            switchTab(currentTab, e.currentTarget);
+          }
         });
 
-        // Add tab panel semantics and hide them all
-        Array.prototype.forEach.call(panels, (panel, index) => {
-    panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', '-1');
-    const id = panel.getAttribute('id');
-    panel.setAttribute('aria-labelledby', tabs[index].id);
-          panel.hidden = true;
+        // Handle keydown events for keyboard users
+        tab.addEventListener("keydown", (e) => {
+          // Get the index of the current tab in the tabs node list
+          const index = Array.prototype.indexOf.call(tabs, e.currentTarget);
+          // Work out which key the user is pressing and
+          // Calculate the new tab's index where appropriate
+          const dir =
+            e.which === 37
+              ? index - 1
+              : (e.which === 39
+        ? index + 1
+        : e.which === 40
+        ? "down"
+        : null);
+          if (dir !== null) {
+            e.preventDefault();
+            // If the down key is pressed, move focus to the open panel,
+            // otherwise switch to the adjacent tab
+            dir === "down"
+              ? panels[index_].focus()
+              : (tabs[dir]
+        ? switchTab(e.currentTarget, tabs[dir])
+        : void 0);
+          }
         });
+      });
 
-        // Initially activate the first tab and reveal the first tab panel
-        tabs[0].removeAttribute('tabindex');
-        tabs[0].setAttribute('aria-selected', 'true');
-        panels[0].hidden = false;
+      // Add tab panel semantics and hide them all
+      Array.prototype.forEach.call(panels, (panel, index) => {
+        panel.setAttribute("role", "tabpanel");
+        panel.setAttribute("tabindex", "-1");
+        const id = panel.getAttribute("id");
+        panel.setAttribute("aria-labelledby", tabs[index].id);
+        panel.hidden = true;
+      });
 
-
-
+      // Initially activate the first tab and reveal the first tab panel
+      tabs[0].removeAttribute("tabindex");
+      tabs[0].setAttribute("aria-selected", "true");
+      panels[0].hidden = false;
     </script>
   </body>
 </html>
