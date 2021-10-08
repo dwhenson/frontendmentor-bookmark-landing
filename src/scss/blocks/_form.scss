@@ -1,13 +1,13 @@
 // CHECK: does this need a refactor?
 
 .form {
-  --bespoke-flow-spacer: 2em;
+  --bespoke-flow-spacer: 2rem;
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   inline-size: min(100%, 70ch);
   margin-inline-start: auto;
   margin-inline-end: auto;
@@ -17,10 +17,14 @@
     flex: 9999 1 auto;
     min-inline-size: min(100%, 50ch);
     border-radius: 0.5em 0.5em 0 0;
-  }
 
-  .input-wrapper.error {
-    background-color: var(--clr-primary-100);
+    svg {
+      position: absolute;
+      display: none;
+      inset-block-start: 50%;
+      inset-inline-end: 1em;
+      transform: translateY(-50%);
+    }
   }
 
   input {
@@ -28,13 +32,9 @@
     padding-block-start: 0.55em;
     padding-block-end: 0.55em;
     padding-inline-start: 1em;
-    border: solid 2px var(--clr-primary-200);
+    border: solid 2px var(--clr-secondary-000);
     border-radius: 0.5em;
     background-color: var(--clr-secondary-000);
-  }
-
-  input.error {
-    border: solid 2px var(--clr-primary-100);
   }
 
   .contact-button {
@@ -47,7 +47,7 @@
     // inset-block-end: -1.65rem;
     inset-inline-start: 0;
     inset-inline-end: 0;
-    min-block-size: 1em;
+    min-block-size: 0.8em;
     padding: 0.15em;
     padding-inline-start: 1rem;
     border: solid 2px var(--clr-primary-100);
@@ -56,8 +56,20 @@
     text-align: start;
   }
 
-  .error-container.error {
-    display: block;
+  .input-wrapper.error {
+    background-color: var(--clr-primary-100);
+
+    input {
+      border: solid 2px var(--clr-primary-100);
+    }
+
+    svg {
+      display: block;
+    }
+
+    .error-container {
+      display: block;
+    }
   }
 
   .error-message {

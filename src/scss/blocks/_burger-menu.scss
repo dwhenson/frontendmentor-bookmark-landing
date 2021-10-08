@@ -54,7 +54,7 @@
 .burger-menu[status="open"] .logo-mobile {
   position: absolute;
   display: block;
-  inset-block-start: 4.5rem;
+  inset-block-start: 4.75rem;
   inset-inline-start: 2rem;
 }
 
@@ -97,7 +97,7 @@
   block-size: 100vh;
   // padding-block-start: max(8vh, 2rem);
   overflow-y: auto;
-  background-color: var(--clr-secondary-300);
+  background-color: hsla(229.09, 31.429%, 20.588%, 0.98);
   // padding-inline: clamp(1rem, 2.5%, 2rem);
   -webkit-overflow-scrolling: touch;
 }
