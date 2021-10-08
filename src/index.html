@@ -902,7 +902,7 @@
           <h2>Stay up-to-date with what we’re doing</h2>
         </div>
 
-        <form class="form" action="">
+        <form id="form" class="form" action="">
           <div class="input-wrapper">
             <label class="visually-hidden" for="email">Enter your email address</label>
             <input
@@ -911,11 +911,11 @@
               type="email"
               placeholder="Enter your email address"
               required />
-            <div class="error-container">
+            <div id="error-message" class="error-container">
               <p class="error-message">Make sure that's an email!</p>
             </div>
           </div>
-          <button class="button accent contact-button">Contact Us</button>
+          <button id="submit" class="button accent contact-button">Contact Us</button>
         </form>
       </section>
     </main>

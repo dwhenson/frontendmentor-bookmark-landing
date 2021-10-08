@@ -16,6 +16,11 @@
     position: relative;
     flex: 9999 1 auto;
     min-inline-size: min(100%, 50ch);
+    border-radius: 0.5em 0.5em 0 0;
+  }
+
+  .input-wrapper.error {
+    background-color: var(--clr-primary-100);
   }
 
   input {
@@ -28,6 +33,10 @@
     background-color: var(--clr-secondary-000);
   }
 
+  input.error {
+    border: solid 2px var(--clr-primary-100);
+  }
+
   .contact-button {
     flex: 1 0 auto;
   }
@@ -35,7 +44,7 @@
   .error-container {
     position: absolute;
     display: none;
-    inset-block-end: -1.65rem;
+    // inset-block-end: -1.65rem;
     inset-inline-start: 0;
     inset-inline-end: 0;
     min-block-size: 1em;
@@ -47,8 +56,8 @@
     text-align: start;
   }
 
-  .error {
-    outline: 1px solid var(--clr-primary-100);
+  .error-container.error {
+    display: block;
   }
 
   .error-message {
