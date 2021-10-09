@@ -38,7 +38,7 @@
     }
 
     p {
-      inline-size: calc(100% + clamp(4rem, 15%, 8rem));
+      inline-size: calc(100% + clamp(2rem, 10%, 4rem));
       padding-block-end: calc(var(--spacer) * 2);
       border-block-end: 4px dotted hsla(231.06, 68.78%, 59.804%, 0.2);
       margin-block-start: 0.5em;
