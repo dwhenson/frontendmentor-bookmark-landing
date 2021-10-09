@@ -23,25 +23,9 @@
   }
 
   .hero-image {
-    position: relative;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   z-index: -1;
-    //   inset-block-end: 0;
-    //   inline-size: 80vw;
-    //   block-size: 80%;
-    //   border-radius: 20rem 0 0 20rem;
-    //   margin-inline-start: calc(50% - 50vw);
-    //   background-color: var(--clr-primary-200);
-
-    //   @include respond-to("medium") {
-    //     inline-size: 55vw;
-    //     block-size: 25rem;
-    //     transform: translate(65%, 25%);
-    //   }
-    // }
+    > svg {
+      max-inline-size: 100%;
+    }
 
     img {
       filter: drop-shadow(0 0.7px 2.2px rgba(0, 0, 0, 0.02))
