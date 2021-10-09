@@ -4,6 +4,7 @@
   &::before {
     content: "";
     position: absolute;
+    z-index: -10;
     inset-block-start: 100%;
     inset-inline-start: 10%;
     inline-size: 100vw;
@@ -24,7 +25,6 @@
 
 .tab-image.background-blob {
   &::before {
-    z-index: -1;
     inset-inline-start: 90%;
     margin-inline-end: 50vw;
     transform: translateY(-80%) rotate(180deg) translateX(100%);
