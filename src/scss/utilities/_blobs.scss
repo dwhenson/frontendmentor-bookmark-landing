@@ -1,0 +1,32 @@
+.background-blob {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline-start: 10%;
+    inline-size: 100vw;
+    block-size: 12rem;
+    border-radius: 20rem 0 0 20rem;
+    background-color: var(--clr-primary-200);
+    transform: translateY(-100%);
+
+    @include respond-to("medium") {
+      block-size: 15rem;
+    }
+
+    @include respond-to("large") {
+      block-size: 20rem;
+    }
+  }
+}
+
+.tab-image.background-blob {
+  &::before {
+    z-index: -1;
+    inset-inline-start: 90%;
+    margin-inline-end: 50vw;
+    transform: translateY(-80%) rotate(180deg) translateX(100%);
+  }
+}
