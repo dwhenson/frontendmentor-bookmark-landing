@@ -1,24 +1,5 @@
 .tabbed {
-  --bespoke-flow-spacer: calc(var(--spacer) * 3);
-  position: relative;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   z-index: -1;
-  //   inline-size: 60vw;
-  //   block-size: 45%;
-  //   border-radius: 0 20rem 20rem 0;
-  //   margin-inline-start: calc(50% - 50vw);
-  //   background-color: var(--clr-primary-200);
-  //   transform: translate(-45%, 5%);
-
-  //   @include respond-to("medium") {
-  //     inline-size: 65vw;
-  //     block-size: 25rem;
-  //     transform: translate(-45%, 5%);
-  //   }
-  // }
+  --bespoke-flow-spacer: max(1rem, 3vh);
 }
 
 [role="tablist"] {
@@ -44,8 +25,9 @@
 
   a {
     display: inline-block;
+    inline-size: 100%;
     min-inline-size: 18rem;
-    padding: 1.5rem 3rem;
+    padding: max(1rem, 1.5vh) 3rem;
     transition: color 150ms;
     text-align: center;
     text-transform: none;
@@ -82,6 +64,7 @@
     flex-basis: 100%;
 
     svg {
+      align-self: start;
       justify-self: end;
       max-inline-size: 100%;
     }
