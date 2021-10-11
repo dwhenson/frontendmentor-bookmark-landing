@@ -46,15 +46,19 @@
   background: var(--clr-secondary-000);
 }
 
-.socials,
-.logo-mobile {
+.burger-menu .socials,
+.burger-menu .logo-mobile {
   display: none;
+
+  @include respond-to("medium") {
+    display: none;
+  }
 }
 
 .burger-menu[status="open"] .logo-mobile {
   position: absolute;
   display: block;
-  inset-block-start: 2.5rem;
+  inset-block-start: 5rem;
   inset-inline-start: 2rem;
 }
 

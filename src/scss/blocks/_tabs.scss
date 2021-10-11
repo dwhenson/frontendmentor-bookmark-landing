@@ -49,6 +49,7 @@
   flex-direction: column-reverse;
   align-items: center;
   gap: calc(var(--spacer) * 4);
+  animation: fade-in 300ms ease-in-out;
 
   @include respond-to("medium") {
     flex-direction: row-reverse;
@@ -67,7 +68,17 @@
       align-self: start;
       justify-self: end;
       max-inline-size: 100%;
-      // background-color: hsl(231.43, 43.75%, 93.725%);
+      background-color: hsl(231.43, 43.75%, 93.725%);
     }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

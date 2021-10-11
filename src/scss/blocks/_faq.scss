@@ -28,6 +28,10 @@
     }
   }
 
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
   details > p {
     padding-block-end: 1.5em;
     border-block-end: 1px solid var(--clr-secondary-100);
