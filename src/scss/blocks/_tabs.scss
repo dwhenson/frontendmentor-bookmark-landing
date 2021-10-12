@@ -63,13 +63,6 @@
   > .tab-image {
     display: grid;
     flex-basis: 100%;
-
-    svg {
-      align-self: start;
-      justify-self: end;
-      max-inline-size: 100%;
-      background-color: hsl(231.43, 43.75%, 93.725%);
-    }
   }
 }
 
