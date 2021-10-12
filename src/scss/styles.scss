@@ -10,21 +10,21 @@
 /* Base Styles
    ================================================== */
 
-// @font-face {
-//   font-family: "rubik";
-//   font-weight: 400;
-//   font-display: swap;
-//   font-style: normal;
-//   src: local("rubik-Regular"), url("../fonts/rubik/rubik-regular.ttf") format("truetype");
-// }
+@font-face {
+  font-family: "rubik";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src: local("rubik-Regular"), url("../fonts/rubik/rubik-regular.ttf") format("truetype");
+}
 
-// @font-face {
-//   font-family: "rubik";
-//   font-weight: 700;
-//   font-display: swap;
-//   font-style: normal;
-//   src: local("rubik-Bold"), url("../fonts/rubik/rubik-500.ttf") format("truetype");
-// }
+@font-face {
+  font-family: "rubik";
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: local("rubik-Bold"), url("../fonts/rubik/rubik-500.ttf") format("truetype");
+}
 
 body {
   overflow-x: hidden;
