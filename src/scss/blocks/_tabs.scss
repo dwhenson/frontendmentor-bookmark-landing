@@ -63,6 +63,15 @@
     display: grid;
     flex-basis: 100%;
     justify-content: center;
+
+    > img {
+      filter: drop-shadow(0 0.7px 2.2px rgba(0, 0, 0, 0.02))
+        drop-shadow(1.7px 5.3px rgba(0, 0, 0, 0.028))
+        drop-shadow(0 3.1px 10px rgba(0, 0, 0, 0.035))
+        drop-shadow(0 5.6px 17.9px rgba(0, 0, 0, 0.042))
+        drop-shadow(0 10.4px 33.4px rgba(0, 0, 0, 0.05))
+        drop-shadow(0 25px 80px rgba(0, 0, 0, 0.07));
+    }
   }
 }
 
