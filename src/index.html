@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Bookmark landing page</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <style>*,::after,::before{box-sizing:border-box}blockquote,body,dd,dl,figure,h1,h2,h3,h4,ol,p,ul{margin:0}.h1,.h2,.h3,.h4,h1,h2,h3,h4{line-height:1.1}:where(ol[role]),:where(ul[role]){list-style-type:none;padding-inline:0}html{scroll-behavior:smooth}body{min-block-size:100vh;background-color:#fff;line-height:1.6;color:#000;text-rendering:optimizeSpeed}img,picture{display:block;max-inline-size:100%}img[width]{inline-size:auto}img[width][height]{block-size:auto}button,input,select,textarea{font:inherit}@media (prefers-reduced-motion:reduce){*,::after,::before{transition-duration:0s!important;animation-duration:0s!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}:root{--clr-primary-100:hsl(0, 94.152%, 66.471%);--clr-primary-200:hsl(231.06, 68.78%, 59.804%);--clr-secondary-000:hsl(0, 0%, 96.863%);--clr-secondary-100:hsl(229.41, 8.3744%, 80%);--clr-secondary-200:hsl(229.41, 8.3744%, 60.196%);--clr-secondary-300:hsl(229.09, 31.429%, 20.588%);--spacer:1rem;--step--1:clamp(0.89rem, 0.87rem + 0.07vw, 0.94rem);--step-0:clamp(1rem, 0.96rem + 0.18vw, 1.13rem);--step-1:clamp(1.27rem, 1.16rem + 0.51vw, 1.62rem);--step-2:clamp(1.8rem, 1.52rem + 1.43vw, 2.8rem)}@font-face{font-family:rubik;font-weight:400;font-display:swap;font-style:normal;src:local("rubik-Regular"),url(../fonts/rubik/rubik-regular.ttf) format("truetype")}@font-face{font-family:rubik;font-weight:700;font-display:swap;font-style:normal;src:local("rubik-Bold"),url(../fonts/rubik/rubik-500.ttf) format("truetype")}body{overflow-x:hidden;font-family:rubik,sans-serif;font-size:var(--step-0);font-weight:400;text-align:center;color:var(--clr-secondary-200)}.h1,h1{font-size:var(--step-2);color:var(--clr-secondary-300)}.h2,h2{font-size:var(--step-1);color:var(--clr-secondary-300)}.h3,h3{font-size:var(--step-0);color:var(--clr-secondary-300)}a{letter-spacing:1px;text-decoration:none;text-transform:uppercase}.align-content{display:grid;grid-template-columns:minmax(2rem,1fr) minmax(2rem,1440px) minmax(2rem,1fr);grid-template-rows:auto 1fr auto}.align-content>*{grid-column:2}.background-blob{position:relative}.background-blob::before{content:"";position:absolute;z-index:-10;inset-block-start:100%;inset-inline-start:10%;inline-size:100vw;block-size:12rem;border-radius:20rem 0 0 20rem;background-color:var(--clr-primary-200);transform:translateY(-100%)}@media (min-width:55em){body{text-align:start}.background-blob::before{block-size:15rem}}@media (min-width:65em){.background-blob::before{block-size:20rem}}.tab-image.background-blob::before{inset-inline-start:90%;margin-inline-end:50vw;transform:translateY(-80%) rotate(180deg) translateX(100%)}.container{padding-inline:clamp(1rem,5%,2rem)}.flow-content>*+*{margin-block-start:var(--bespoke-flow-spacer,calc(var(--spacer) * 2))}.flow-section>*+*{margin-block-start:max(8vh,2rem)}main.flow-section{margin-block-start:max(4vh,1rem)}.full-bleed{inline-size:100vw;margin-inline-start:calc(50% - 50vw)}.intro{max-inline-size:50ch;margin-inline-start:auto;margin-inline-end:auto;text-align:center}:focus-visible{outline:2px dotted var(--clr-primary-100,currentColor);outline-offset:.2em}:focus:not(:focus-visible){outline:transparent}.skip-link{position:absolute;z-index:100000;display:inline-block;inset-block-start:1rem;padding:.7rem 1rem .5rem;outline:#000 dotted 3px;background-color:#000;font-weight:700;text-decoration:none;text-transform:uppercase;color:#fff;inset-inline-start:1rem}.skip-link:hover{background:#fff;color:#000}.skip-link:not(:focus){position:absolute;inline-size:1px;block-size:auto;padding:0;border:0;overflow:hidden;margin:0;clip:rect(0 0 0 0);white-space:nowrap}main:focus{outline:0}.split{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:var(--bespoke-gap,var(--spacer))}@media (min-width:55em){.split{flex-direction:row}}.visually-hidden{position:absolute!important;inline-size:1px;block-size:1px;overflow:hidden;white-space:nowrap;clip:rect(0 0 0 0)}.visually-hidden:active,.visually-hidden:focus,.visually-hidden:hover{z-index:100000;display:block;inset-block-start:5px;inset-inline-start:5px;inline-size:auto;block-size:auto;padding:15px 23px 14px;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);background-color:#000;font-size:1rem;font-weight:700;line-height:normal;text-decoration:none;color:#fff;clip:auto!important}.button{display:inline-block;inline-size:fit-content;padding-block-start:.5em;padding-block-end:.5em;border:2px solid var(--bd,var(--clr-primary-200));border-radius:.5rem;box-shadow:0 .7px 2.2px rgba(0,0,0,.02),0 1.7px 5.3px rgba(0,0,0,.028),0 3.1px 10px rgba(0,0,0,.035),0 5.6px 17.9px rgba(0,0,0,.042),0 10.4px 33.4px rgba(0,0,0,.05),0 25px 80px rgba(0,0,0,.07);background-color:var(--bg,var(--clr-primary-200));transition:transform 350ms cubic-bezier(0,.26,.13,1.55),background-color 150ms,color 150ms;letter-spacing:0;text-align:center;text-transform:none;color:var(--fg,var(--clr-secondary-000));cursor:pointer;padding-inline:1.5em}.button:focus,.button:hover{--bg:var(--clr-secondary-000);--fg:var(--clr-primary-200);transform:scale(1.025)}.button:active{--bg:var(--clr-primary-100);--fg:var(--clr-secondary-000)}.accent{--bd:var(--clr-primary-100);--bg:var(--clr-primary-100);--fg:var(--clr-secondary-000)}.accent:focus,.accent:hover{--bg:var(--clr-secondary-000);--fg:var(--clr-primary-100)}.accent:active{--bg:var(--clr-primary-200);--fg:var(--clr-secondary-100)}.diminish{--bd:var(--clr-secondary-100);--bg:var(--clr-secondary-100);--fg:var(--clr-secondary-300)}.diminish:focus,.diminish:hover{--bd:var(--clr-secondary-300);--bg:var(--clr-secondary-000);--fg:var(--clr-secondary-300)}.diminish:active{--bg:var(--clr-primary-200);--fg:var(--clr-secondary-100)}.site-head{margin-block-start:max(4vh,2rem)}.site-head__inner{--bespoke-gap:calc(var(--spacer) * 2.5);flex-direction:row}.logo{max-inline-size:min-content;margin-block-start:8px}.nav-list{flex-direction:row;flex-wrap:wrap;justify-content:flex-end}.nav-list a:not(.login){display:block;transition:color 150ms;font-weight:500;text-align:center;color:var(--clr-secondary-300)}.nav-list a:not(.login):hover{color:var(--clr-primary-100)}.nav-list .login{letter-spacing:1px;text-transform:uppercase}.burger-menu__trigger{display:none}.burger-menu__bar,.burger-menu__bar::after,.burger-menu__bar::before{position:absolute;z-index:10;display:block;inset-inline-start:50%;inline-size:24px;block-size:3px;border:1px solid var(--clr-secondary-300);border-radius:3px;margin-inline-start:-12px;background:var(--clr-secondary-300);transition:transform 350ms ease-in-out}.burger-menu__bar{inset-block-start:50%;transform:translateY(-50%)}.burger-menu__bar::after,.burger-menu__bar::before{content:""}.burger-menu__bar::before{inset-block-start:-8px}.burger-menu__bar::after{inset-block-end:-8px}.burger-menu[status=open] .burger-menu__bar,.burger-menu[status=open] .burger-menu__bar::after,.burger-menu[status=open] .burger-menu__bar::before{border:1px solid var(--clr-secondary-000);background:var(--clr-secondary-000)}.burger-menu .logo-mobile,.burger-menu .socials{display:none}.burger-menu[status=open] .logo-mobile{position:absolute;display:block;inset-block-start:5rem;inset-inline-start:2rem}.burger-menu[status=open] .socials{display:flex;flex-direction:row;justify-content:center;gap:calc(var(--spacer) * 2);margin-block-start:auto;margin-block-end:2rem}.burger-menu[enabled=true] .burger-menu__trigger{position:relative;display:block;inline-size:2rem;block-size:2rem;border:0;background:0 0;cursor:pointer}.burger-menu[enabled=true] .burger-menu__panel{position:absolute;z-index:1;display:flex;visibility:hidden;opacity:0;inset-block-start:0;inset-inline-start:0;inset-inline-end:0;flex-direction:column;block-size:100vh;overflow-y:auto;background-color:rgba(36,42,69,.98);-webkit-overflow-scrolling:touch}.burger-menu[enabled=true] .navigation ul{flex-direction:column;gap:0;padding-inline-start:2rem;padding-inline-end:2rem;margin-block-start:10rem}.burger-menu[enabled=true] .navigation li{inline-size:100%;padding-block-start:1.5rem;padding-block-end:1.5rem;border-block-start:1px solid var(--clr-secondary-000)}.burger-menu[enabled=true] .navigation a{color:var(--clr-secondary-000)}.burger-menu[enabled=true] .navigation .login{--bg:transparent;--bd:var(--clr-secondary-000);inline-size:100%;padding-block-start:1em;padding-block-end:1em;margin-block-start:1.5em}.burger-menu[enabled=true][status=open] .burger-menu__panel{visibility:visible;opacity:1;transition:opacity .4s}.burger-menu[enabled=true][status=closed] .burger-menu__panel>*{opacity:0}.burger-menu[enabled=true][status=open] .burger-menu__panel>*{opacity:1;transition:opacity .4s .2s}.burger-menu[enabled=true][status=open] .burger-menu__bar::before{inset-block-start:0;transform:rotate(45deg)}.burger-menu[enabled=true][status=open] .burger-menu__bar::after{inset-block-start:0;transform:rotate(-45deg)}.burger-menu[enabled=true][status=open] .burger-menu__bar{border-color:transparent;background:0 0;transform:rotate(180deg)}.hero{--bespoke-gap:calc(var(--spacer) * 4)}@media (min-width:55em){.burger-menu .logo-mobile,.burger-menu .socials{display:none}.hero{flex-direction:row-reverse}.hero .hero-image,.hero .hero-text{flex-basis:100%}.hero h1{max-inline-size:20ch}.hero p{max-inline-size:50ch}}.hero .hero-image>svg{max-inline-size:100%}.hero .hero-image img{filter:drop-shadow(0 .7px 2.2px rgba(0, 0, 0, .02)) drop-shadow(1.7px 5.3px rgba(0, 0, 0, .028)) drop-shadow(0 3.1px 10px rgba(0, 0, 0, .035)) drop-shadow(0 5.6px 17.9px rgba(0, 0, 0, .042)) drop-shadow(0 10.4px 33.4px rgba(0, 0, 0, .05)) drop-shadow(0 25px 80px rgba(0, 0, 0, .07))}.hero .buttons{--bespoke-gap:calc(var(--spacer) * 1);flex-direction:row;margin-block-start:calc(var(--spacer) * 3)}@media (min-width:55em){.hero .buttons{justify-content:flex-start}}.hero .buttons .button{flex:1 1 auto}@media (min-width:55em){.hero .buttons .button{flex:0 1 auto}}.tabbed{--bespoke-flow-spacer:max(1rem, 3vh)}[role=tablist]{display:flex;flex-direction:column-reverse;border-block-end:1px solid var(--clr-secondary-100)}[role=tablist] li{border-block-start:.5px solid var(--clr-secondary-100)}@media (min-width:55em){[role=tablist]{flex-direction:row;inline-size:fit-content;margin-inline:auto}[role=tablist] li{border-block-start:0}}[role=tablist] a{display:inline-block;inline-size:100%;min-inline-size:18rem;padding:max(1rem,1.5vh) 3rem;transition:color 150ms;text-align:center;text-transform:none;color:var(--clr-secondary-200)}[role=tablist] a:hover{color:var(--clr-primary-100)}[role=tablist] [aria-selected]{border-block-end:4px solid var(--clr-primary-100);color:var(--clr-secondary-300)}.tab-wrapper{display:flex;flex-direction:column;align-items:center;gap:calc(var(--spacer) * 3)}@media (min-width:55em){.tab-wrapper{flex-direction:row}}.tab-wrapper>.tab-text{--bespoke-flow-spacer:calc(var(--spacer) * 1);flex-basis:100%}.tab-wrapper>.tab-image{display:grid;flex-basis:100%;justify-content:center}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}.extensions{--bespoke-flow-spacer:calc(var(--spacer) * 3)}.extensions .card-wrapper{--bespoke-gap:calc(var(--spacer) * 3);align-items:center;justify-content:center}@media (min-width:55em){.extensions .card-wrapper{align-items:flex-start}.extensions .card:nth-of-type(2){margin-block-start:calc(var(--spacer) * 6)}.extensions .card:nth-of-type(3){margin-block-start:calc(var(--spacer) * 12)}}.extensions .card{position:relative;display:flex;flex-direction:column;align-items:center;padding:clamp(1rem,5%,2rem);padding-block-start:clamp(2rem,7.5%,4rem);border-radius:1em;box-shadow:0 .7px 2.2px rgba(0,0,0,.02),0 1.7px 5.3px rgba(0,0,0,.028),0 3.1px 10px rgba(0,0,0,.035),0 5.6px 17.9px rgba(0,0,0,.042),0 10.4px 33.4px rgba(0,0,0,.05),0 25px 80px rgba(0,0,0,.07)}.extensions .card h3{margin-block-start:calc(var(--spacer) * 2)}.extensions .card p{inline-size:calc(100% + clamp(2rem,10%,4rem));padding-block-end:calc(var(--spacer) * 2);border-block-end:4px dotted rgba(82,103,223,.2);margin-block-start:.5em;font-size:var(--step--1);text-align:center}.extensions .card .button{margin-block-start:clamp(2rem,7.5%,4rem)}.faq{--bespoke-flow-spacer:calc(var(--spacer) * 3);max-inline-size:50rem;margin-inline-start:auto;margin-inline-end:auto;text-align:start}.faq details>summary{display:flex;align-items:center;justify-content:space-between;padding-block-start:1.5em;padding-block-end:1.5em;border-block-start:1px solid var(--clr-secondary-100);transition:color .3s;list-style:none;font-weight:500;color:var(--clr-secondary-300);cursor:pointer}.faq details>summary:hover h3{color:var(--clr-primary-100)}.faq details>summary:hover svg path{stroke:#fa5959}.faq details>summary::-webkit-details-marker{display:none}.faq details>p{padding-block-end:1.5em;border-block-end:1px solid var(--clr-secondary-100);line-height:2}.faq details[open]>p{animation:.3s ease-out sweep;will-change:opacity,transform}.faq details svg{margin-block-start:-2px;transition:transform .2s ease-in-out}.faq details svg path{transition:stroke .2s ease-in-out}.faq details[open] svg{transform:rotate(180deg)}.faq details[open] svg path{stroke:#fa5959}.faq .button{display:block;margin-inline-start:auto;margin-inline-end:auto}@keyframes sweep{0%{opacity:0;transform:translateY(-1em)}100%{opacity:1;transform:translateY(0)}}.contact{--bespoke-flow-spacer:calc(var(--spacer) * 2);padding-block-start:4rem;padding-block-end:4rem;background-color:var(--clr-primary-200);color:var(--clr-secondary-000)}.contact .sub-heading{font-size:var(--step--1);letter-spacing:.5em;text-transform:uppercase}.contact h2{color:var(--clr-secondary-000)}.form{--bespoke-flow-spacer:2rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem;inline-size:min(100%,70ch);margin-inline-start:auto;margin-inline-end:auto}.form .input-wrapper{position:relative;flex:9999 1 auto;min-inline-size:min(100%,50ch);border-radius:.5em .5em 0 0}.form .input-wrapper svg{position:absolute;display:none;inset-block-start:50%;inset-inline-end:1em;transform:translateY(-50%)}.form input{inline-size:100%;padding-block-start:.55em;padding-block-end:.55em;padding-inline-start:1em;border:solid 2px var(--clr-secondary-000);border-radius:.5em;background-color:var(--clr-secondary-000)}.form .contact-button{flex:1 0 auto}.form .error-container{position:absolute;display:none;inset-inline-start:0;inset-inline-end:0;min-block-size:.8em;padding:.15em;padding-inline-start:1rem;border:solid 2px var(--clr-primary-100);border-radius:0 0 .5em .5em;background-color:var(--clr-primary-100);text-align:start}.form .input-wrapper.error{background-color:var(--clr-primary-100)}.form .input-wrapper.error input{border:solid 2px var(--clr-primary-100)}.form .input-wrapper.error .error-container,.form .input-wrapper.error svg{display:block}.form .error-message{font-size:var(--step--1);color:var(--clr-seconday-000)}.site-foot{--bespoke-gap:calc(var(--spacer) * 3);grid-column:1/-1;padding-block-start:calc(var(--spacer) * 2);padding-block-end:calc(var(--spacer) * 2);margin-block-start:0;background-color:var(--clr-secondary-300);color:var(--clr-secondary-000)}.site-foot .logo path{transition:fill 150ms;fill:var(--clr-secondary-000)}.site-foot .logo:hover path{fill:var(--clr-primary-100)}.site-foot a{display:block;transition:color 150ms;text-align:center;color:var(--clr-secondary-000)}.site-foot a:hover{color:var(--clr-primary-100)}.site-foot .socials{--bespoke-gap:calc(var(--spacer) * 3)}.site-foot .socials path{transition:fill 150ms}.site-foot .socials:hover{fill:var(--clr-primary-100)}.socials{--bespoke-gap:calc(var(--spacer) * 1);flex-direction:row;align-items:center;justify-content:flex-start}.socials path{transition:fill 150ms}.socials li:hover path{fill:var(--clr-primary-100)}
+    </style>
     <script async src="js/index.js"></script>
   </head>
 
@@ -82,7 +83,231 @@
     <main id="main-content" tabindex="-1" class="flow-section">
       <section class="[ hero ][ split ]">
         <div class="hero-image background-blob">
-          <img src="images/illustration-hero.svg" alt="" width="657" height="466"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="657"
+            height="466">
+            <defs>
+              <filter
+                id="a"
+                width="118%"
+                height="126.9%"
+                x="-9%"
+                y="-5.7%"
+                filterUnits="objectBoundingBox">
+                <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1" />
+                <feGaussianBlur
+                  in="shadowOffsetOuter1"
+                  result="shadowBlurOuter1"
+                  stdDeviation="2" />
+                <feColorMatrix
+                  in="shadowBlurOuter1"
+                  result="shadowMatrixOuter1"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                <feMerge>
+                  <feMergeNode in="shadowMatrixOuter1" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <rect id="c" width="578" height="385" rx="26" />
+              <filter
+                id="b"
+                width="126%"
+                height="139%"
+                x="-13%"
+                y="-11.7%"
+                filterUnits="objectBoundingBox">
+                <feOffset dy="30" in="SourceAlpha" result="shadowOffsetOuter1" />
+                <feGaussianBlur
+                  in="shadowOffsetOuter1"
+                  result="shadowBlurOuter1"
+                  stdDeviation="20" />
+                <feColorMatrix
+                  in="shadowBlurOuter1"
+                  values="0 0 0 0 0.18243335 0 0 0 0 0.230632694 0 0 0 0 0.506057518 0 0 0 0.200120192 0" />
+              </filter>
+              <linearGradient id="d" x1="99.013%" x2="2.544%" y1="71.675%" y2="29.014%">
+                <stop offset="0%" stop-color="#151515" />
+                <stop offset="100%" stop-color="#3D3D3D" />
+              </linearGradient>
+              <rect id="e" width="536" height="346" y="3" rx="8" />
+            </defs>
+            <g
+              fill="none"
+              fill-rule="evenodd"
+              filter="url(#a)"
+              transform="translate(39 9)">
+              <g transform="translate(.5 .5)">
+                <g fill-rule="nonzero">
+                  <use fill="#000" filter="url(#b)" xlink:href="#c" />
+                  <use fill="#777" xlink:href="#c" />
+                </g>
+                <rect
+                  width="574.23"
+                  height="381.865"
+                  x="2"
+                  y="2"
+                  fill="url(#d)"
+                  fill-rule="nonzero"
+                  rx="25" />
+                <g transform="translate(21.03 16.303)">
+                  <rect
+                    width="471.463"
+                    height="353.756"
+                    x="33"
+                    fill="#2A2A2A"
+                    fill-rule="nonzero"
+                    opacity=".1"
+                    rx="5" />
+                  <mask id="f" fill="#fff"><use xlink:href="#e" /></mask>
+                  <use fill="#E8EAF6" fill-rule="nonzero" xlink:href="#e" />
+                  <g mask="url(#f)">
+                    <path fill="#5267DF" d="M-3.53 3.197h547v59h-547z" />
+                    <g transform="translate(22.47 17.197)" fill="#FFF">
+                      <circle cx="16" cy="16" r="16" opacity=".245" />
+                      <circle cx="477" cy="16" r="16" opacity=".104" />
+                      <g transform="translate(47 6)">
+                        <rect width="120" height="6" opacity=".75" rx="3" />
+                        <rect width="64" height="6" y="14" opacity=".25" rx="3" />
+                      </g>
+                    </g>
+                  </g>
+                  <g mask="url(#f)">
+                    <g transform="translate(57 96)">
+                      <rect width="261" height="316" fill="#FFF" rx="8" />
+                      <rect width="128" height="316" x="295" fill="#FFF" rx="8" />
+                      <rect
+                        width="120"
+                        height="6"
+                        x="78.47"
+                        y="38.197"
+                        fill="#242A45"
+                        opacity=".5"
+                        rx="3" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g transform="translate(110 135)">
+                <circle cx="16" cy="26" r="16" fill="#F98E5D" />
+                <rect width="88" height="6" x="284" fill="#242A45" opacity=".25" rx="3" />
+                <rect
+                  width="88"
+                  height="6"
+                  x="284"
+                  y="20"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+                <rect
+                  width="88"
+                  height="6"
+                  x="284"
+                  y="40"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+                <rect
+                  width="88"
+                  height="6"
+                  x="284"
+                  y="60"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+                <rect
+                  width="88"
+                  height="6"
+                  x="284"
+                  y="94"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+                <rect
+                  width="88"
+                  height="6"
+                  x="284"
+                  y="114"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+                <rect
+                  width="88"
+                  height="6"
+                  x="284"
+                  y="134"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+                <rect
+                  width="64"
+                  height="6"
+                  x="47"
+                  y="30"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+              </g>
+              <g transform="translate(110 201)">
+                <circle cx="16" cy="16" r="16" fill="#6AC6D6" />
+                <rect
+                  width="120"
+                  height="6"
+                  x="47"
+                  y="6"
+                  fill="#242A45"
+                  opacity=".5"
+                  rx="3" />
+                <rect
+                  width="64"
+                  height="6"
+                  x="47"
+                  y="20"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+              </g>
+              <g transform="translate(110 257)">
+                <circle cx="16" cy="16" r="16" fill="#A47ED4" />
+                <rect
+                  width="120"
+                  height="6"
+                  x="47"
+                  y="6"
+                  fill="#242A45"
+                  opacity=".5"
+                  rx="3" />
+                <rect
+                  width="64"
+                  height="6"
+                  x="47"
+                  y="20"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+              </g>
+              <g transform="translate(110 313)">
+                <circle cx="16" cy="16" r="16" fill="#EC7878" />
+                <rect
+                  width="120"
+                  height="6"
+                  x="47"
+                  y="6"
+                  fill="#242A45"
+                  opacity=".5"
+                  rx="3" />
+                <rect
+                  width="64"
+                  height="6"
+                  x="47"
+                  y="20"
+                  fill="#242A45"
+                  opacity=".25"
+                  rx="3" />
+              </g>
+            </g>
+          </svg>
         </div>
         <div class="[ hero-text ][ flow-content ]">
           <h1>A Simple Bookmark Manager</h1>
@@ -125,7 +350,11 @@
           <section id="section-simple" role="tabpanel" aria-labelledby="simple">
             <div class="tab-wrapper">
               <div class="[ tab-image ][ background-blob ]">
-                <img src="images/illustration-features-tab-1.svg" alt="" width="536" height="346"/>
+                <img
+                  src="images/illustration-features-tab-1.svg"
+                  alt=""
+                  width="536"
+                  height="346" />
               </div>
               <div class="[ tab-text ][ flow-content ]">
                 <h3 class="h2">Bookmark in one click</h3>
@@ -142,7 +371,11 @@
           <section id="section-speedy" role="tabpanel" aria-labelledby="speedy">
             <div class="tab-wrapper">
               <div class="[ tab-image ][ background-blob ]">
-                <img src="images/illustration-features-tab-2.svg" alt="" width="478" height="416"/>
+                <img
+                  src="images/illustration-features-tab-2.svg"
+                  alt=""
+                  width="478"
+                  height="416" />
               </div>
               <div class="[ tab-text ][ flow-content ]">
                 <h3 class="h2">Intelligent Search</h3>
@@ -159,7 +392,11 @@
           <section id="section-easy" role="tabpanel" aria-labelledby="easy">
             <div class="tab-wrapper">
               <div class="[ tab-image ][ background-blob ]">
-                <img src="images/illustration-features-tab-3.svg" alt="" width="440" height="380"/>
+                <img
+                  src="images/illustration-features-tab-3.svg"
+                  alt=""
+                  width="440"
+                  height="380" />
               </div>
               <div class="[ tab-text ][ flow-content ]">
                 <h3 class="h2">Share your bookmarks</h3>
