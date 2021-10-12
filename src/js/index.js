@@ -1,6 +1,7 @@
 import burgerMenu from "./lib/burger-menu";
 import { form, emailInput, submitForm, tablist, tabs, panels } from "./utils/elements";
 import { validateEmailSubmission } from "./lib/validate-email";
+import { switchTab } from "./lib/move-tabs";
 
 /* Form validation
 /* ==================================================== */
@@ -12,22 +13,6 @@ submitForm.addEventListener("click", function (event) {
 
 /* Tab activation
 /* ==================================================== */
-
-const switchTab = (oldTab, newTab) => {
-  newTab.focus();
-  // Make the active tab focusable by the user (Tab key)
-  newTab.removeAttribute("tabindex");
-  // Set the selected state
-  newTab.setAttribute("aria-selected", "true");
-  oldTab.removeAttribute("aria-selected");
-  oldTab.setAttribute("tabindex", "-1");
-  // Get the indices of the new and old tabs to find the correct
-  // tab panels to show and hide
-  const index = Array.prototype.indexOf.call(tabs, newTab);
-  const oldIndex = Array.prototype.indexOf.call(tabs, oldTab);
-  panels[oldIndex].hidden = true;
-  panels[index].hidden = false;
-};
 
 // // Add the tablist role to the first <ul> in the .tabbed container
 tablist.setAttribute("role", "tablist");
