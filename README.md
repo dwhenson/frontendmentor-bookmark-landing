@@ -33,4 +33,4 @@ I would very much welcome advice on the following issues:
 ## Resources
 
 - 🔗 Heydon Pickering has a really good and [in-depth write up on tabbed interfaces](https://inclusive-components.design/tabbed-interfaces/) that I used extensively as the basis for my approach to that section
-- 🔗 The page is a bit of a mess but it is the best good [guide how to style details/summary elements](https://webdesign.tutsplus.com/tutorials/explaining-the-details-and-summary-elements--cms-21999)
+- 🔗 The page is a bit of a mess but it is the best [guide how to style details/summary elements](https://webdesign.tutsplus.com/tutorials/explaining-the-details-and-summary-elements--cms-21999) that I could find
