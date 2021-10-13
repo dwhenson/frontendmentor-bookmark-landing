@@ -25,7 +25,7 @@
 
 .tabbed.background-blob {
   &::before {
-    transform: translateY(-200%) rotate(180deg) translateX(45%);
+    transform: translateY(-215%) rotate(180deg) translateX(45%);
 
     @include respond-to("medium") {
       transform: translateY(-80%) rotate(180deg) translateX(65%);
