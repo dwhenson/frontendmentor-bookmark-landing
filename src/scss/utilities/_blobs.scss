@@ -11,7 +11,7 @@
     block-size: 12rem;
     border-radius: 20rem 0 0 20rem;
     background-color: var(--clr-primary-200);
-    transform: translateY(-100%);
+    transform: translateY(-100%) translateX(5%);
 
     @include respond-to("medium") {
       block-size: 15rem;
@@ -23,10 +23,16 @@
   }
 }
 
-.tab-image.background-blob {
+.tabbed.background-blob {
   &::before {
-    inset-inline-start: 90%;
-    margin-inline-end: 50vw;
-    transform: translateY(-80%) rotate(180deg) translateX(100%);
+    transform: translateY(-200%) rotate(180deg) translateX(45%);
+
+    @include respond-to("medium") {
+      transform: translateY(-80%) rotate(180deg) translateX(65%);
+    }
+
+    @include respond-to("large") {
+      transform: translateY(-80%) rotate(180deg) translateX(85%);
+    }
   }
 }
