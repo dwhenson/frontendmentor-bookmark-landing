@@ -1,4 +1,4 @@
-# Semantic HTML with progessicly enhanced navigation, tabbed component and form validation.
+# Semantic HTML with progressively enhanced navigation, tabbed component and form validation.
 
 This is a solution to the [Art gallery website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges are designed to help developers improve their coding skills by building realistic projects. Assets are provided, but no guidance, and developers are free to choose any approach to solving the challenge.
 
