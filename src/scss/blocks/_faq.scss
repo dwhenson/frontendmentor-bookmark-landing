@@ -10,12 +10,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: 500;
     padding-block-start: 1.5em;
     padding-block-end: 1.5em;
     border-block-start: 1px solid var(--clr-secondary-100);
     transition: color 300ms;
     list-style: none;
-    font-weight: 500;
     color: var(--clr-secondary-300);
     cursor: pointer;
 
